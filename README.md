@@ -5,10 +5,11 @@ Practice hooks by refactoring a class component into a function component, and w
 
 ### Level 1: Hooks
 - [ ] refactor to use hooks and make `App` a function component
+- [ ] open a PR for review!
 
 ### Level 2: Testing
 - [ ] write tests of any level to validate the modal functions
-
+- [ ] open a PR for review!
 
 ## Getting Started
 

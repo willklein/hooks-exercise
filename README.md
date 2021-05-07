@@ -14,6 +14,14 @@ Practice hooks by refactoring a class component into a function component, and w
 - [ ] write tests of any level to validate the modal functions
 - [ ] open a PR for review!
 
+<details>
+<summary>Need more challenge?</summary>
+
+### Secret Level: Custom Hooks
+- [ ] refactor the modal behavior into a custom hook called `useModal`
+
+</details>
+
 ## Getting Started
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

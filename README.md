@@ -3,6 +3,9 @@
 Practice hooks by refactoring a class component into a function component, and write a custom hook!
 ## Challenges
 
+### Level 0: Refs
+- [ ] refactor the ref for `modalNode` to be created with `createRef` rather than the with a callback ref
+
 ### Level 1: Hooks
 - [ ] refactor to use hooks and make `App` a function component
 - [ ] open a PR for review!

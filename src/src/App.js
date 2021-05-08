@@ -2,16 +2,18 @@ import React, { useEffect, useRef, useState } from "react"
 
 import "./App.css"
 
-const useToggleModal = (modalNode) => {
+const App = () => {
 	const [state, setState] = useState({ modalIsOpen: false })
 
 	const openModal = () => setState({ modalIsOpen: true })
 
 	const closeModal = () => setState({ modalIsOpen: false })
 
+	const modal = useRef()
+
 	useEffect(() => {
 		const handleClickOutside = (event) => {
-			if (!modalNode.current?.contains(event.target)) {
+			if (!modal.current?.contains(event.target)) {
 				closeModal()
 			}
 		}
@@ -20,15 +22,7 @@ const useToggleModal = (modalNode) => {
 		return () => {
 			document.removeEventListener("mousedown", handleClickOutside)
 		}
-	}, [modalNode])
-
-	return [state.modalIsOpen, openModal, closeModal]
-}
-
-const App = () => {
-	const modal = useRef()
-
-	const [modalIsOpen, openModal, closeModal] = useToggleModal(modal)
+	}, [modal])
 
 	return (
 		<div>
@@ -37,7 +31,7 @@ const App = () => {
 			<div
 				ref={modal}
 				style={{
-					display: modalIsOpen ? "block" : "none",
+					display: state.modalIsOpen ? "block" : "none",
 					border: "solid",
 					padding: "5px",
 					margin: "5px",
